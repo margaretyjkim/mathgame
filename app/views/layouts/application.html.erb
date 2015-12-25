@@ -8,38 +8,40 @@
   <%= csrf_meta_tags %>
   <link rel="stylesheet" type="text/css" href="questions.css">
   <link href='https://fonts.googleapis.com/css?family=Roboto:700' rel='stylesheet' type='text/css'>
-  <script type="text/javascript">
-  	var counter = 10;
-  	var t;
-  	var isTimerOn = false;
 
-  	function countdown()
-  	{
-  		document.getElementById("txt").value = counter;
-  		counter--;
-  		t = setTimeout("countdown();", 1000);
-  	}
-
-  	function stopMe()
-  	{
-  		isTimerOn = false;
-  		clearTimeout(t);
-  	}
-
-  	function startMe()
-  	{
-  		if (!isTimerOn)
-  		{
-  			isTimeOn = true;
-  			countdown();
-  		}
-  	}
-  </script>
 </head>
 <body>
 
 
 <%= yield %>
 
+
+<script type="text/javascript" async>
+    var counter = 10;
+    var t;
+    var isTimerOn = false;
+
+    function countdown()
+    {
+      document.getElementById("txt").value = counter;
+      counter--;
+      t = setTimeout("countdown();", 1000);
+    }
+
+    function stopMe()
+    {
+      isTimerOn = false;
+      clearTimeout(t);
+    }
+
+    function startMe()
+    {
+      if (!isTimerOn)
+      {
+        isTimeOn = true;
+        countdown();
+      }
+    }
+  </script>
 </body>
 </html>
