@@ -16,32 +16,6 @@
 <%= yield %>
 
 
-<script type="text/javascript" async>
-    var counter = 10;
-    var t;
-    var isTimerOn = false;
-
-    function countdown()
-    {
-      document.getElementById("txt").value = counter;
-      counter--;
-      t = setTimeout("countdown();", 1000);
-    }
-
-    function stopMe()
-    {
-      isTimerOn = false;
-      clearTimeout(t);
-    }
-
-    function startMe()
-    {
-      if (!isTimerOn)
-      {
-        isTimeOn = true;
-        countdown();
-      }
-    }
-  </script>
+<script src="questions.js" async></script>
 </body>
 </html>
