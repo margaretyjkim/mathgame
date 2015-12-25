@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mprogramapp</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <link rel="stylesheet" type="text/css" href="questions.css">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:700' rel='stylesheet' type='text/css'>
+  <script type="text/javascript">
+  	var counter = 100;
+  	var t;
+  	var isTimerOn = false;
+
+  	function countdown()
+  	{
+  		document.getElementById("txt").value = counter;
+  		counter--;
+  		t = setTimeout("countdown();", 1000);
+  	}
+
+  	function stopMe()
+  	{
+  		isTimerOn = false;
+  		clearTimeout(t);
+  	}
+
+  	function startMe()
+  	{
+  		if (!isTimerOn)
+  		{
+  			isTimeOn = true;
+  			countdown();
+  		}
+  	}
+  </script>
+</head>
+<body>
+	<input type="button" value="start Countdown"
+			onclick="startMe();" >
+	<input type="text" id="txt" >
+		<input type="button" value="stop Countdown"
+			onclick="stopMe();" >
+
+<%= yield %>
+
+</body>
+</html>

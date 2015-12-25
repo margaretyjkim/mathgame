@@ -1,0 +1,35 @@
+<div class="questions">
+<%= @question.number1 %>
+<%= @question.operation %>
+<%= @question.number2 %>
+<span>=</span>
+<%= @question.number3%></div>
+
+<div id="yes">
+	<div class= "leftcolum">
+	<%= form_tag questions_path do |f| %>
+		<%= hidden_field_tag :number1, @question.number1 %>
+		<%= hidden_field_tag :number2, @question.number2 %>
+		<%= hidden_field_tag :number3, @question.number3 %>
+		<%= hidden_field_tag :operation, @question.operation %>
+		<%= hidden_field_tag :correct, 'yes' %>
+		<div style="float: left;"><%= button_tag "Correct", class: "myButton" %></div>
+	<% end %>
+	</div>
+
+
+<div id="no">
+	<div class="rightcolumn">
+	<%= form_tag questions_path do |f| %>
+		<%= hidden_field_tag :number1, @question.number1 %>
+		<%= hidden_field_tag :number2, @question.number2 %>
+		<%= hidden_field_tag :number3, @question.number3 %>
+		<%= hidden_field_tag :operation, @question.operation %>
+		<%= hidden_field_tag :correct, 'no' %>
+		<div style="float: right;"><%= button_tag "Incorrect", class: "myButton" %></div>
+	<% end %>
+	</div>
+</div>
+
+
+<div class="alert"><%= flash[:notice] %></div>
