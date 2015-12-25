@@ -8,7 +8,7 @@
   <link rel="stylesheet" type="text/css" href="questions.css">
   <link href='https://fonts.googleapis.com/css?family=Roboto:700' rel='stylesheet' type='text/css'>
   <script type="text/javascript">
-  	var counter = 100;
+  	var counter = 10;
   	var t;
   	var isTimerOn = false;
 
@@ -36,10 +36,10 @@
   </script>
 </head>
 <body>
-	<input type="button" value="start Countdown"
+	<input type="button" value="start Countdown" class="myButton"
 			onclick="startMe();" >
 	<input type="text" id="txt" >
-		<input type="button" value="stop Countdown"
+		<input type="button" value="stop Countdown" class="myButton"
 			onclick="stopMe();" >
 
 <%= yield %>
