@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Mprogramapp</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -36,11 +37,7 @@
   </script>
 </head>
 <body>
-	<input type="button" value="start Countdown" class="myButton"
-			onclick="startMe();" >
-	<input type="text" id="txt" >
-		<input type="button" value="stop Countdown" class="myButton"
-			onclick="stopMe();" >
+
 
 <%= yield %>
 
