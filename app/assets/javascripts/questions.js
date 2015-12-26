@@ -5,6 +5,15 @@ var counter = 10;
 var t;
 var isTimerOn = false;
 
+function timeLimit()
+{
+	for ( var questionSet = 1; questionSet < 11; questionSet++  ) {
+		console.log(questionSet);
+	}
+
+}
+
+
 function countdown()
 {
 	document.getElementById("txt").value = counter;
@@ -20,7 +29,7 @@ function stopMe()
 
 function startMe()
 {
-	if (!isTimerOn)
+	if ( !isTimerOn )
 	{
 		isTimeOn = true;
 		countdown();
