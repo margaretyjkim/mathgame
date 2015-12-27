@@ -1,6 +1,13 @@
 // # Place all the behaviors and hooks related to the matching controller here.
 // # All this logic will automatically be available in application.js.
 
+//testing out setInterval
+	function simpleMessage() {
+		alert("10 secs up!")
+	}
+
+	setInterval(simpleMessage, 10000);
+//testing end
 var counter = 10;
 var t;
 var isTimerOn = false;
