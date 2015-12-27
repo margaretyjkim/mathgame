@@ -1,20 +1,13 @@
 // # Place all the behaviors and hooks related to the matching controller here.
 // # All this logic will automatically be available in application.js.
 
-//testing out setInterval
-	function simpleMessage() {
-		alert("10 secs up!")
-	}
-
-	setInterval(simpleMessage, 10000);
-//testing end
 var counter = 10;
 var t;
 var isTimerOn = false;
 
 function timeLimit()
 {
-	for ( var questionSet = 1; questionSet < 11; questionSet++  ) {
+	for ( var questionSet = 1; questionSet < 11; questionSet++ ) {
 		console.log(questionSet);
 	}
 
@@ -42,6 +35,27 @@ function startMe()
 		countdown();
 	}
 }
+
+//testing out setInterval
+	var hello = document.getElementById("hello");
+
+	function simpleMessage() {
+		alert("10 secs up!");
+	}
+
+	var intervalHandle = setInterval(simpleMessage, 10000);
+//testing out onclick
+	function myFunction() {
+		document.getElementById("hello").style.color = "red";
+	}
+//testing out end
+
+//clearInterval does not work right now
+	// hello.onclick = function() {
+	// 	clearInterval(intervalHandle);
+	// }
+
+//testing end
 
 
 // $(window).load(function () {
