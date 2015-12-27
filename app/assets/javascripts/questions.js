@@ -37,13 +37,13 @@ function startMe()
 }
 
 //testing out setInterval
-	var hello = document.getElementById("hello");
+	var timerOut = document.getElementById("timerOut");
 
 	function simpleMessage() {
 		alert("10 secs up!");
 	}
 
-	var intervalHandle = setInterval(simpleMessage, 10000);
+	var intervalHandle = setInterval(simpleMessage, 3000);
 //testing out onclick
 	// function myFunction() {
 	// 	document.getElementById("hello").style.color = "red";
@@ -51,7 +51,7 @@ function startMe()
 //testing out end
 
 //clearInterval does not work right now
-	function myFunction() {
+	function timerOver() {
 	 	clearInterval(intervalHandle);
 	}
 
