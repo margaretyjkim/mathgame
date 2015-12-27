@@ -45,15 +45,15 @@ function startMe()
 
 	var intervalHandle = setInterval(simpleMessage, 10000);
 //testing out onclick
-	function myFunction() {
-		document.getElementById("hello").style.color = "red";
-	}
+	// function myFunction() {
+	// 	document.getElementById("hello").style.color = "red";
+	// }
 //testing out end
 
 //clearInterval does not work right now
-	// hello.onclick = function() {
-	// 	clearInterval(intervalHandle);
-	// }
+	function myFunction() {
+	 	clearInterval(intervalHandle);
+	}
 
 //testing end
 
