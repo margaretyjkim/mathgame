@@ -5,6 +5,11 @@ var counter = 10;
 var t;
 var isTimerOn = false;
 
+function resetPage() {
+	document.getElementById("txt").style.display =
+	"block";
+}
+
 function timeLimit()
 {
 	for ( var questionSet = 1; questionSet < 11; questionSet++ ) {
@@ -41,18 +46,22 @@ function startMe()
 
 	function simpleMessage() {
 		alert("10 secs up!");
+		resetPage();
 	}
 
-	var intervalHandle = setInterval(simpleMessage, 3000);
+	var intervalHandle = setInterval(simpleMessage, 10000);
+
+	window.onload = intervalHandle;
 //testing out onclick
 	// function myFunction() {
 	// 	document.getElementById("hello").style.color = "red";
 	// }
 //testing out end
 
-//clearInterval does not work right now
+//clearInterval testing
 	function timerOver() {
 	 	clearInterval(intervalHandle);
+	 	resetPage();
 	}
 
 //testing end
