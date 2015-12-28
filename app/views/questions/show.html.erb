@@ -1,17 +1,34 @@
-<input type="text" id="txt" placeholder="10 sec timer" >
-<br/>
-<input type="button" value="Start" class="myButton"
-		onclick="startMe();" >
-<input type="button" value="Stop" class="myButton"
-		onclick="stopMe();" >
+<div class="row">
+	<div class="small-6 columns">
+		<input type="text" id="txt" placeholder="10 sec timer" >
+	</div>
+	<div class="small-6 columns">
+		<input type="button" value="Start" class="myButton"
+				onclick="startMe();" >
+		<input type="button" value="Stop" class="myButton"
+				onclick="stopMe();" >
+	</div>
+</div>
+
+<!-- <div class="row">
+	<div class="small-offset-6 columns">
+		<input type="button" value="Start" class="myButton"
+				onclick="startMe();" >
+		<input type="button" value="Stop" class="myButton"
+				onclick="stopMe();" >
+	</div>
+</div> -->
 
 
-<div class="questions">
-<%= @question.number1 %>
-<%= @question.operation %>
-<%= @question.number2 %>
-<span>=</span>
-<%= @question.number3%></div>
+<div class="questions row">
+	<div class="small-8 columns">
+		<%= @question.number1 %>
+		<%= @question.operation %>
+		<%= @question.number2 %>
+		<span>=</span>
+		<%= @question.number3%>
+	</div>
+</div>
 
 <div id="yes">
 	<div class= "leftcolumn">
