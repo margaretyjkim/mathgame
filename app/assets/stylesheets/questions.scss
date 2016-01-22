@@ -1,22 +1,22 @@
-// Place all the styles related to the questions controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
 body {
 	background-color: orange;
-	// margin: 10%;
 	font-family: "Roboto";
 	color: white;
+	padding: 10% 0% 0% 10%;
+}
+
+.layout {
+	padding: 10% 0% 0% 10%;
 }
 
 .alert {
 	font-fize: 24px;
 	padding: 5%;
 	margin: 10%;
-
 }
 
-.questions {
-	margin: 5%;
+.questions{
+	margin: 10%;
 	font-size: 36px;
 }
 
@@ -39,23 +39,14 @@ body {
 	display:inline-block;
 	cursor:pointer;
 	color:#666666;
-	font-family:Arial;
+	font-family:"Roboto";
 	font-size:15px;
 	font-weight:bold;
-	padding:32px 24px;
 	text-decoration:none;
 	text-shadow:0px -5px 0px #ffffff;
+	margin: 10%;
 }
-.myButton:hover {
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f6f6f6), color-stop(1, #ffffff));
-	background:-moz-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
-	background:-webkit-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
-	background:-o-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
-	background:-ms-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
-	background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f6f6', endColorstr='#ffffff',GradientType=0);
-	background-color:#f6f6f6;
-}
+
 .myButton:active {
 	position:relative;
 	top:1px;

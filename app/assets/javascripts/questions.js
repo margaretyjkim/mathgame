@@ -8,6 +8,7 @@ var isTimerOn = false;
 function resetPage() {
 	document.getElementById("txt").style.display =
 	"block";
+	$('body').html('')//render the page
 }
 
 function timeLimit()
