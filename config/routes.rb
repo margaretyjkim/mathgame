@@ -11,6 +11,8 @@ Rails.application.routes.draw do
 
   get 'questions', to: 'questions#show'
 
+  get 'random', to: 'questions#random'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

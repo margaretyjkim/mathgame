@@ -1,73 +1,50 @@
 // # Place all the behaviors and hooks related to the matching controller here.
 // # All this logic will automatically be available in application.js.
+$(function() {
+	var counter = 5;
+	var t;
+	var isTimerOn = false;
+	var timerOut = document.getElementById("timerOut");
+	var intervalHandle = setInterval(5000);
+	var startBtn = $("#start-button");
+	var stopBtn = $("#stop-button");
 
-var counter = 10;
-var t;
-var isTimerOn = false;
+	window.onload = intervalHandle;
 
-function resetPage() {
-	document.getElementById("txt").style.display =
-	"block";
-	$('body').html('')//render the page
-}
-
-function timeLimit()
-{
-	for ( var questionSet = 1; questionSet < 11; questionSet++ ) {
-		console.log(questionSet);
+	function startMe() {
+		if ( !isTimerOn ) {
+			isTimerOn = true;
+			countdown();
+		}
 	}
 
-}
+	function countdown() {
+		setTimeout(resetPage(), 5000);
+	}
 
-
-function countdown()
-{
-	document.getElementById("txt").value = counter;
-	counter--;
-	t = setTimeout("countdown();", 1000);
-}
-
-function stopMe()
-{
-	isTimerOn = false;
-	clearTimeout(t);
-}
-
-function startMe()
-{
-	if ( !isTimerOn )
-	{
-		isTimeOn = true;
+	function resetPage() {
+		if(isTimerOn == false){
+			return;
+		}
+		location.reload();
 		countdown();
 	}
-}
 
-//testing out setInterval
-	var timerOut = document.getElementById("timerOut");
+	function stopMe() {
+		isTimerOn = false;
+	}
 
-	function simpleMessage() {
-		alert("10 secs up!");
+	function timerOver() {
+		clearInterval(intervalHandle);
 		resetPage();
 	}
 
-	var intervalHandle = setInterval(simpleMessage, 10000);
+	startBtn.on('click', function() {
+		startMe();
+	});
 
-	window.onload = intervalHandle;
-//testing out onclick
-	// function myFunction() {
-	// 	document.getElementById("hello").style.color = "red";
-	// }
-//testing out end
+	stopBtn.on('click', function(){
+		stopMe();
+	});
 
-//clearInterval testing
-	function timerOver() {
-	 	clearInterval(intervalHandle);
-	 	resetPage();
-	}
-
-//testing end
-
-
-// $(window).load(function () {
-// 	startMe;
-// });
+});

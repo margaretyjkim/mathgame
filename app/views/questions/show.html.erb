@@ -1,12 +1,11 @@
+
 <div class="row">
 	<div class="small-6 columns">
-		<input type="text" id="txt" placeholder="10 sec timer" >
+		<input type="text" id="txt" placeholder="5 sec timer" >
 	</div>
 	<div class="small-6 columns">
-		<input type="button" value="Start" class="myButton"
-				onclick="startMe();" >
-		<input type="button" value="Stop" class="myButton"
-				onclick="stopMe();" >
+		<input id="start-button" type="button" value="Start" class="myButton">
+		<input id="stop-button" type="button" value="Stop" class="myButton">
 	</div>
 </div>
 
@@ -17,7 +16,7 @@
 			<%= @question.operation %>
 			<%= @question.number2 %>
 			<span>=</span>
-			<%= @question.number3%>
+			<%= @question.number3 %>
 		</div>
 	</div>
 </div>
@@ -52,3 +51,4 @@
 </div>
 
 <div class="alert"><%= flash[:notice] %></div>
+

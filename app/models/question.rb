@@ -25,7 +25,7 @@ class Question
 	end
 
 	def self.random_answer
-		return rand(1..100)
+		return rand(1..50)
 	end
 
 	def self.random_operation

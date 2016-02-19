@@ -1,8 +1,15 @@
 class QuestionsController < ApplicationController
 
 	def show
+
 		@question = Question.random_question
-		@response = Response.new
+
+	end
+
+	def random
+
+		@question = Question.random_question if request.xhr?
+
 	end
 
 	def create
